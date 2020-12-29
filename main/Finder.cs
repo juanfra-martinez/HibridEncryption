@@ -33,5 +33,12 @@ namespace main
 
             return false;
         }
+
+        public static string GetDirectoryTreeInfo(string path)
+        {
+            TreeItem ti = new TreeItem(new DirectoryInfo(path));
+
+            return ti.GetJson();
+        }
     }
 }
